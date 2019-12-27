@@ -34,6 +34,4 @@ steps:
     artifactType: 'container'
   displayName: Publish artifacts
 
-  steps:
-- download: current
-  patterns: '**/*.apk'
+ 
