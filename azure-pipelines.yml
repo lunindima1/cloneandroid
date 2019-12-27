@@ -8,6 +8,11 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.apk'
+    targetFolder: '$(build.artifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
 - task: Gradle@2
   inputs:
     workingDirectory: ''
